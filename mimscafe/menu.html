@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon (1).ico" />
+    <meta charset="UTF-8">
+    <title>Mim's Cafe</title>
+    <style>
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .mySlides1 {display:none}
+        img {vertical-align: middle;}
+
+        .mySlides2 {display:none}
+        img {vertical-align: middle;}
+
+        .mySlides3 {display:none}
+        img {vertical-align: middle;}
+
+        .container {
+            background-color: #FCECC9;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+            height: 540px;
+            width: 1200px;
+            margin-top: 0px;
+        }
+
+        .menu {
+            color: #264653;
+            padding: 30px;
+            margin-bottom: 0px;
+        }
+
+        .menu-link {
+            padding: 30px;
+        }
+
+        .menu-link:hover {
+            color: #27AE60;
+        }
+
+        .menu-link:active {
+            color: #27AE60;
+        }
+
+        .three-boxes {
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 400px;
+            height: 300px;
+            position: relative;
+            margin: auto;
+            margin-bottom: 200px;
+            margin-top: 100px;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: #264653;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: #27AE60;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .subtitle-box {
+            background-color:#27AE60;
+            color: #fcecc9;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #27AE60;
+            padding: 30px;
+            color: #fcecc9;
+            position:fixed;
+            bottom:0;
+            width:100%;
+            height: 80px;
+        }
+
+        .subtitle {
+            padding: 20px;
+            text-align: center;
+            font-size:120%;
+        }
+
+        /* this prevents links from being blue with an underline - instead they have the settings of the class they are in */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            min-height: 100%;
+            min-width: 100%;
+        }
+
+        p {
+            color: #264653;
+            font-family: "Work Sans";
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <p class="menu" align="right">
+            <a href="index.html" class="menu-link">Home</a>
+            <a href="menu.html" class="menu-link">Menu</a>
+            <a href="catering.html" class="menu-link">Catering</a>
+            <a href="contact.html" class="menu-link">Contact</a>
+        </p>
+    </div>
+
+    <div class="header">
+        <img src="images/trans_header.png" alt="img not found">
+    </div>
+
+    <div class="three-boxes">
+
+        <!-- Plates and Platters Slideshow -->
+        <div class="slideshow-container">
+            <div class="subtitle-box">
+                <p class="subtitle">Plates & Platters</p>
+            </div>
+            <div class="mySlides1 fade">
+                <img src="images/platter.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+                <img src="images/platter-one.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+                <img src="images/platter-two.jpg" style="width:100%">
+            </div>
+
+            <div><!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+        </div>
+
+        <!-- Sandwiches and Burgers Slideshow -->
+        <div class="slideshow-container">
+            <div class="subtitle-box">
+                <p class="subtitle">Sandwiches & Burgers</p>
+            </div>
+            <div class="mySlides2 fade">
+                <img src="images/sandwich.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides2 fade">
+                <img src="images/sandwich-three.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides2 fade">
+                <img src="images/sandwich-two.jpg" style="width:100%">
+            </div>
+
+            <div><!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+            </div>
+        </div>
+
+        <!-- Signature Dishes Slideshow -->
+        <div class="slideshow-container">
+            <div class="subtitle-box">
+                <p class="subtitle">Signature Dishes</p>
+            </div>
+            <div class="mySlides3 fade">
+                <img src="images/dish-two.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides3 fade">
+                <img src="images/dish.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides3 fade">
+                <img src="images/dish-three.jpg" style="width:100%">
+            </div>
+
+            <div><!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = [1,1];
+        var slideId = ["mySlides1", "mySlides2", "mySlides3"];
+        showSlides(1, 0);
+        showSlides(1,1);
+        showSlides(1,2);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            var i;
+            var x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) {slideIndex[no] = 1}
+            if (n < 1) {slideIndex[no] = x.length}
+            for (i = 0; i > x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex[no]-1].style.display = "block";
+        }
+    </script>﻿
+
+    <div class="footer">
+        <p>651-646-0456 | 1435 Cleveland Avenue, Saint Paul, MN | shaheensinc@gmail.com</p>
+    </div>
+
+</div>
+</body>
+</html>
